@@ -1,0 +1,54 @@
+---
+title: "HW7: Chapter 7, Sections 8.1 to 8.3"
+author: "Your Name Here"
+output: pdf_document
+---
+
+The code below just loads some packages and makes it so that enough digits are printed that you won't get confused by rounding errors.
+
+```{r, message = FALSE}
+library(dplyr) # functions like summarize
+library(ggplot2) # for making plots
+library(readr)
+
+options("pillar.sigfig" = 10) # print 10 significant digits in summarize output
+```
+
+## Crowdedness and GDP
+
+Danielle Vasilescu and Howard Wainer (*Chance*, 2005) used data from the United Nations Center for Human Settlements to investigate aspects of living conditions for several countries. Among the variables they looked at were the country's per capita gross domestic product (GDP, in dollars) and Crowdedness, defined as the average number of persons per room living in homes there.  Suppose we want to estimate the relationship between these variables, using GDP as the explanatory variable and Crowdedness as the response.
+
+The following code reads the data in:
+
+```{r}
+crowdedness <- read.csv("http://www.evanlray.com/data/sdm4/Crowdedness.csv")
+```
+
+#### (a) Create an appropriate plot of the data.
+
+```{r}
+
+```
+
+
+#### (b) Find a transformation of the data so that the simple linear regression model conditions are as well satisfied as possible.  You do not need to show all of the steps in your process; you can just keep your final selected transformation.  (It's also fine if you want to keep all of the steps you took for your records.)  For your final selected transformation, please create 3 plots: (1) a scatter plot with the transformed variables, (2) a scatter plot of the residuals vs. the transformed explanatory variable, and (3) a histogram or density plot of the residuals.  No need to discuss these plots in this part.
+
+```{r}
+
+```
+
+#### (c) Discuss all of the linear regression model conditions based on your transformed variables.  For each condition, you should write a sentence or two describing whether or not the condition is satisfied and why.  If your conclusion is based on the plots you made for part (b), please clearly indicate which plot or plots you are looking at and describe a specific characteristic of that plot that your conclusion is based on.
+
+```{r}
+
+```
+
+#### (d) What are the interpretations of the estimated intercept and slope?  Please interpret the coefficient estimates in context on the scale of the *transformed* data.
+
+
+
+#### (e) Find a set of three Bonferroni-adjusted confidence intervals with familywise confidence level of 95% for the median crowdedness in the "population" for countries with a GDP of $5000, $25000, and $45000.  Interpret your intervals in context.  You can use the predict function to generate the confidence intervals on the transformed scale, but you will have to then transform back to the original data scale.
+
+```{r}
+
+```
