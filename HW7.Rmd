@@ -22,6 +22,15 @@ The following code reads the data in:
 
 ```{r}
 crowdedness <- read.csv("http://www.evanlray.com/data/sdm4/Crowdedness.csv")
+crowdedness <- crowdedness %>%
+  mutate(
+    Crowdedness = as.numeric(Crowdedness),
+    fertility = as.numeric(fertility)
+  ) %>%
+  filter(
+    !is.na(Crowdedness)
+  )
+head(crowdedness)
 ```
 
 #### (a) Create an appropriate plot of the data.
